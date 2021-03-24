@@ -1,6 +1,7 @@
 # Sample .NET Core Angular SPA
 
 ## Overview
+
 I am using this repo to recreate a problem with Angular Material Tooltips where the tooltip displays and then immediately disappears after hovering over the element. This occurs only when using matTooltipClass and only in an Angular SPA running under .NET Core using the dotnet angular template.
 
 ![Demo](https://github.com/rmegal/media/blob/main/videos/dotnetcorengspa_001.gif)
@@ -80,6 +81,16 @@ I am using this repo to recreate a problem with Angular Material Tooltips where 
 
   * Run `ng update @angular/material@9`.
 * Site works. Problem persists.
+* Upgrade to Angular/Material V10.
+  ```
+  npm uninstall @nguniversal/module-map-ngfactory-loader
+  ng update @angular/core@10 @angular/cli@10
+  npm install --force
+  ng update @angular/material@10
+  ```
+  * Remove import of ModuleMapLoaderModule from '@nguniversal/module-map-ngfactory-loader'.
+* Site works. Problem persists.
 
 ## Notes
-* I've done as little as possible to the original code created by the dotnet angular template in order to recreate the problem. The problem persists even after updating to the latest angular/material, including updating remaining packages.
+
+I've done as little as possible to the original code created by the dotnet angular template in order to recreate the problem. The problem persists even after updating to the latest angular/material, including updating remaining packages.
