@@ -90,6 +90,17 @@ I am using this repo to recreate a problem with Angular Material Tooltips where 
   ```
   * Remove import of ModuleMapLoaderModule from '@nguniversal/module-map-ngfactory-loader'.
 * Site works. Problem persists.
+* Upgrade to Angular/Material V11.
+  ```
+  ncu -u codelyzer
+  npm install
+  git commit -a
+  ng update @angular/core@latest @angular/cli@latest
+  npm install --force
+  ng update @angular/material@11
+  ```
+* Site works. Problem persists.
+
 
 ## Notes
 
