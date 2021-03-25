@@ -2,7 +2,7 @@
 
 ## Overview
 
-I am using this repo to recreate a problem with Angular Material Tooltips where the tooltip displays and then immediately disappears after hovering over the element. This occurs only when using matTooltipClass and only in an Angular SPA running under .NET Core using the dotnet angular template.
+I am using this repo to recreate a problem with Angular Material Tooltips where the tooltip displays and then immediately disappears after hovering over the element. This occurs only when using matTooltipClass and only in an Angular SPA running under .NET Core that was created using the dotnet angular template.
 
 ![Demo](https://github.com/rmegal/media/blob/main/videos/dotnetcorengspa_001.gif)
 
@@ -64,7 +64,7 @@ I am using this repo to recreate a problem with Angular Material Tooltips where 
   npm ERR! A complete log of this run can be found in:
   npm ERR!     C:\Users\ray\AppData\Local\npm-cache\_logs\2021-03-24T18_55_26_222Z-debug.log
   ? Package install failed, see above.
-  × Migration failed. See above for further details.
+  Ã— Migration failed. See above for further details.
   ```
 
   * The only way I was able to work around this was to run `npm install --force`. The `ng update` does update the package.json file but npm fails. Using `--force` allows it to complete. Things *look* OK.
