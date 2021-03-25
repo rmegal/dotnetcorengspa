@@ -4,7 +4,17 @@
 
 I am using this repo to recreate a problem with Angular Material Tooltips where the tooltip displays and then immediately disappears after hovering over the element. This occurs only when using matTooltipClass and only in an Angular SPA running under .NET Core that was created using the dotnet angular template.
 
-![Demo](https://github.com/rmegal/media/blob/main/videos/dotnetcorengspa_001.gif)
+![Demo](https://github.com/rmegal/media/blob/main/videos/dotnetcorengspa_002.gif)
+
+## Solution
+
+The problem was caused by an interaction with bootstrap. The following is found [here](https://getbootstrap.com/docs/5.0/components/tooltips/):
+
+> The outermost wrapper element should have the .tooltip class and role="tooltip".
+
+I renamed my class from `.tooltip` to `.rg-tooltip` to fix it:
+
+![Demo](https://github.com/rmegal/media/blob/main/videos/dotnetcorengspa_003.gif)
 
 ## Steps to Create
 * run `dotnet new angular` from the project directory.
